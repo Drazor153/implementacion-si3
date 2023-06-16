@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title  %} Primera pagina {% endblock %}
+
+{% block content %}
+
+    <h1>Bienvenido a mi sitio web</h1>
+    {% if name %}
+    <p>Hola, {{name}}!!</p>
+    {% else %}
+    <p>Hola, tu nombre?</p>
+    {% endif %}
+
+    {% for friend in friends %}
+    <p>Amigo {{friend}} </p>
+
+    {% endfor%}
+
+{% endblock %}
