@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} Primera pagina {% endblock %} {%
+block content %}
+<div class="postulacion-section">
+   <div class="ofertas-div" data-foo="aaa">
+      <h2>Ofertas Laborales:</h2>
+      <ul id="lista-ofertas">
+         {% for oferta in lista_ofertas %}
+         <li class="item-oferta" data-idoferta="{{oferta.id_oferta}}">
+            {{oferta.nom_oferta}}
+         </li>
+         {% endfor %}
+         <!-- <li class="item-postu" data-idoferta="2">oferta2</li>
+                <li class="item-postu" data-idoferta="3">oferta3</li> -->
+      </ul>
+   </div>
+   <div class="candidatos-div">
+      <h2>Candidatos</h2>
+      <ul id="lista-candidatos"></ul>
+   </div>
+</div>
+<!-- <h1>Pagina de postulaciones :D</h1> -->
+<script src="/static/js/postulacion.js"></script>
+{% endblock %}

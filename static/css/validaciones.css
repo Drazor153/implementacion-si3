@@ -1,0 +1,83 @@
+h1 {
+  color: green;
+}
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  padding: 0.2rem 1rem;
+
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.primary-btn {
+  background-color: var(--primary-bg-btn);
+}
+
+.primary-btn:hover{
+  background-color: var(--primary-bg-btn-hover);
+}
+
+.secondary-btn {
+  background-color: var(--secondary-bg-btn);
+}
+
+.secondary-btn:hover{
+  background-color: var(--secondary-bg-btn-hover);
+}
+
+/* Div general contenedor */
+.validar-section {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  background-color: #e6e6e6;
+}
+/* Div izquierdo */
+.rut-section, .postulacion-section {
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  height: fit-content;
+  padding: 30px 20px;
+}
+
+.rut-section input[type="text"] {
+  width: 80%;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.rut-section button {
+  margin-bottom: 10px;
+}
+
+.rut-section img {
+  height: 1rem;
+}
+
+/* Div derecho */
+.postulacion-section{
+  border-radius: 80px;
+}
+
+.postu-detalles{
+  display: flex;
+  align-items: center;
+  background-color: #f2fbf8;
+  text-align: center;
+  justify-content: center;
+  width: 350px;
+  min-height: 13rem;
+  margin-top: 1rem;
+  border: 1px solid black;
+}
+.postu-btns{
+  margin: 2rem .5rem;
+
+}

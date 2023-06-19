@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %} Validación {% endblock %} {% block
+content %}
+<div class="validar-section">
+   <div class="rut-section">
+      <h3>Ingrese candidato</h3>
+      <input type="text" name="rut" id="rut" placeholder="Rut" />
+      <button class="btn primary-btn" id="submit-rut">
+         <img src="/static/img/search.png" alt="magnifying-glass" />
+      </button>
+   </div>
+   <div class="postulacion-section">
+      <input type="hidden" id="idPostulacion" value="-1" />
+      <div class="postu-detalles">
+         nombre de la propuesta, los estudios requeridos, la experiencia
+         requerida, el cargo ofrecido, el suelo ofrecido, y las horas laborales
+      </div>
+      <div class="postu-btns">
+         <button class="btn primary-btn" id="aceptar-postu">Aprobar</button>
+         <button class="btn secondary-btn" id="rechazar-postu">Rechazar</button>
+      </div>
+   </div>
+</div>
+<!-- <h1>Pagina de validaciones :D</h1> -->
+
+<script src="/static/js/validacion.js"></script>
+{% endblock %}
