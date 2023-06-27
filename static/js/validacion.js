@@ -6,7 +6,7 @@ $(document).ready(() => {
          return;
       }
       $.ajax({
-         url: "/buscar-postulacion",
+         url: "/controller/buscar-postulacion",
          type: "GET",
          data: { rut },
          success: (response) => {
@@ -26,7 +26,7 @@ $(document).ready(() => {
    $("#aceptar-postu").click(() => {
       const id_postulacion = $("input#idPostulacion").val();
       $.ajax({
-         url: "selecciona-opcion",
+         url: "/controller/selecciona-opcion",
          type: "POST",
          data: { id_postulacion, estado: "Validada" },
          success: (response) => {
@@ -39,7 +39,7 @@ $(document).ready(() => {
    $("#rechazar-postu").click(() => {
       const id_postulacion = $("input#idPostulacion").val();
       $.ajax({
-         url: "selecciona-opcion",
+         url: "controller/selecciona-opcion",
          type: "POST",
          data: { id_postulacion, estado: "No validada" },
          success: (response) => {

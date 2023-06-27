@@ -9,3 +9,5 @@ class Database:
 
     def get_connection(self):
         return self.conexion
+    # def close(self): 
+    #     msc.

@@ -5,7 +5,7 @@ $(document).ready(function() {
       
       const idOferta = $(this).data('idoferta');
       $.ajax({
-         url: '/selecciona_oferta',
+         url: '/controller/selecciona_oferta',
          type: 'GET',
          data: {idOferta},
          success: (response) => {

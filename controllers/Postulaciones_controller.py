@@ -15,7 +15,7 @@ def postulaciones():
     return render_template('postulacion.html', style_file = style, lista_ofertas = lista_ofertas)
 
 # Controlador Postulaciones
-@postulaciones_bp.route('/selecciona_oferta', methods=['GET'])
+@postulaciones_bp.route('/controller/selecciona_oferta', methods=['GET'])
 def selecciona_oferta():
     idOferta = request.args.get('idOferta')
     model = Postulacion()
