@@ -11,6 +11,7 @@ class Postulacion:
       cur = self.mysql.cursor()
       cur.execute(f'select * from postulacion where id_oferta = {id_oferta}')
       data = cur.fetchall()
+      cur.close()
       return data
    
    # Funcion que hace lo mismo que selecciona_opcion
@@ -22,6 +23,7 @@ class Postulacion:
          cur = self.mysql.cursor()
          cur.execute(f'select * from postulacion where rut = {rut}')
          data = cur.fetchall()
+         cur.close()
          return data
       except:
          print('Error02 buscar_postulacion')
@@ -33,6 +35,7 @@ class Postulacion:
          cur.execute(f"update postulacion set estado = '{decision}' where id_postulacion = {id_postulacion}")
          # self.mysql.connection.commit()
          self.mysql.commit()
+         cur.close()
          print(cur.rowcount, 'record(s) updated')
          return cur.rowcount
       except:
@@ -43,4 +46,5 @@ class Postulacion:
         cur = self.mysql.cursor(dictionary=True)
         cur.execute(f'SELECT * FROM candidato WHERE rut = {rut}')
         data = cur.fetchall()
+        cur.close()
         return data

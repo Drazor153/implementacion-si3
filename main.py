@@ -13,7 +13,7 @@ app.register_blueprint(validaciones_bp)
 @app.errorhandler(404)
 def page_not_found(error):
     # print(error)
-    return redirect(url_for('postulaciones.postulaciones'))
+    return redirect(url_for('postulaciones.solicitar_oferta_laboral'))
 # main
 if __name__ == '__main__':
     app.run(debug=True)

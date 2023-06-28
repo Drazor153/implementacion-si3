@@ -4,14 +4,16 @@ from flask import Blueprint, render_template, request, jsonify
 from models.model_oferta import OfertaLaboral
 from models.model_postulacion import Postulacion
 
+# from models.database import db
+
 postulaciones_bp = Blueprint('postulaciones', __name__)
 
+style = 'postulaciones.css'
 # Vista Postulaciones
 @postulaciones_bp.route('/postulaciones')
-def postulaciones():
+def solicitar_oferta_laboral():
     model = OfertaLaboral()
     lista_ofertas = model.pedir_oferta()
-    style = 'postulaciones.css'
     return render_template('postulacion.html', style_file = style, lista_ofertas = lista_ofertas)
 
 # Controlador Postulaciones

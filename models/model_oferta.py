@@ -13,4 +13,6 @@ class OfertaLaboral:
         cur = self.mysql.cursor(dictionary=True)
         cur.execute('SELECT * FROM oferta_laboral')
         data = cur.fetchall()
+        cur.close()
+        # self.mysql.close()
         return data
