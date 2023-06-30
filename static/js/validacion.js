@@ -6,7 +6,7 @@ $(document).ready(() => {
          return;
       }
       $.ajax({
-         url: "/controller/buscar-postulacion",
+         url: "/controller/ingresar-rut",
          type: "GET",
          data: { rut },
          success: (response) => {

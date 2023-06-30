@@ -9,16 +9,23 @@ $(document).ready(function() {
          type: 'GET',
          data: {idOferta},
          success: (response) => {
-            const lista_postulaciones = response.data
+            const lista_candidatos = response.data
             // console.log(response.data);
             $('#lista-candidatos').empty();
-            lista_postulaciones.forEach(candidato => {
-               let li = $('<li></li>').text(candidato);
+            lista_candidatos.forEach(candidato => {
+               // console.log(typeof candidato['fecha'])
+               var fecha = new Date(candidato['fecha']);
+
+               var fechaFormateada = (fecha.getDate() + 1) + "/" + (fecha.getMonth() + 1) + "/" + fecha.getFullYear();
+
+               // console.log(new Date())
+
+               let li = $('<li></li>').text(`${candidato['nombre']}, ${fechaFormateada}, ${candidato['estado']}`);
                li.addClass('item-candidato');
                $('#lista-candidatos').append(li)
             });
          }
       })
-      console.log(idOferta);
+      // console.log(idOferta);
    })
 })

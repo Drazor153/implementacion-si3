@@ -8,7 +8,7 @@ class Postulacion:
       pass
    
    def pedir_postulacion(self, id_oferta):
-      cur = self.mysql.cursor()
+      cur = self.mysql.cursor(dictionary=True)
       cur.execute(f'select * from postulacion where id_oferta = {id_oferta}')
       data = cur.fetchall()
       cur.close()
@@ -42,9 +42,4 @@ class Postulacion:
          print('Error03 selecciona_opcion')
    
    # nuestra manera
-   def buscar_rut(self, rut):
-        cur = self.mysql.cursor(dictionary=True)
-        cur.execute(f'SELECT * FROM candidato WHERE rut = {rut}')
-        data = cur.fetchall()
-        cur.close()
-        return data
+   
