@@ -7,7 +7,7 @@ from controllers.Validaciones_controller import validaciones_bp
 app = Flask(__name__)
 
 app.register_blueprint(postulaciones_bp)
-app.register_blueprint(validaciones_bp)
+app.register_blueprint(validaciones_bp) 
 
 # errorhandler 404
 @app.errorhandler(404)

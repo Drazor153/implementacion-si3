@@ -19,6 +19,13 @@ class Candidato:
         cur = self.mysql.cursor(dictionary=True)
         cur.execute(f'SELECT p.rut, p.id_postulacion, of.*  FROM postulacion p JOIN oferta_laboral of ON (p.rut = {rut} AND p.id_oferta = of.id_oferta)')
         data = cur.fetchone()
+        
+        if not data:
+            return {}
+        
+        for key, value in data.items():
+            if type(value) == bytes:
+                data[key] = value.decode()
         cur.close()
         return data
     

@@ -1,4 +1,9 @@
 $(document).ready(() => {
+
+   // $('input#rut').on('input', function () {
+   //    console.log(this.value);
+   // })
+
    $("#submit-rut").click(() => {
       const rut = $("input#rut").val();
       if (rut.length === 0) {
@@ -10,15 +15,24 @@ $(document).ready(() => {
          type: "GET",
          data: { rut },
          success: (response) => {
-            const lista = response.data[0];
-            if (lista === undefined) {
+            if (Object.keys(response).length === 0) {
                $("div.postu-detalles").text(
                   "No se ha encontrado la postulación asociada al rut"
                );
                return;
             }
-            $("div.postu-detalles").text(lista.join());
-            $("input#idPostulacion").val(lista[0]);
+            const estudios_req =JSON.parse(response.estudios_req);
+            const exp_req = JSON.parse(response.exp_req)
+
+            const datosOferta = `Propuesta: ${response.nombre}<br/>
+            Estudios Requeridos: ${estudios_req.area}, nivel: ${estudios_req.nivel}<br/>
+            Experiencia requerida: ${exp_req.años} <br/>
+            Cargo a postular: ${response.cargo} <br/>
+            Sueldo: ${response.sueldo} <br/>
+            Horas laborales: ${response.horaslab}`;
+
+            $("div.postu-detalles").html(datosOferta);
+            $("input#idPostulacion").val(response.id_postulacion);
          },
       });
    });

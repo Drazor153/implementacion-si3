@@ -1,60 +1,60 @@
-:root{
-    --navbar-bg: #373737;
-    --main-color:#a0e1c3;
-    --secondary-color: #d0f9eb;
-    --li-navbar-hover: rgb(116, 166, 143);
-    --primary-bg-btn: #2d9bf0;
-    --primary-bg-btn-hover: #1f6fac;
-    --secondary-bg-btn: #f14726;
-    --secondary-bg-btn-hover: #932b16;
+:root {
+   --navbar-bg: #373737;
+   --main-color: #a0e1c3;
+   --secondary-color: #d0f9eb;
+   --li-navbar-hover: rgb(116, 166, 143);
+   --primary-bg-btn: #2d9bf0;
+   --primary-bg-btn-hover: #1f6fac;
+   --secondary-bg-btn: #f14726;
+   --secondary-bg-btn-hover: #932b16;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    /* font-size: xx-large; */
+* {
+   font-family: "Source Sans 3", sans-serif;
+   margin: 0;
+   padding: 0;
+   /* font-family: "Comic Sans MS", cursive, sans-serif; */
+   /* font-size: xx-large; */
 }
-p{
-    color: red;
-}
-
-.up-nav{
-    display: flex;
-    justify-content: space-between;
-    background-color: #e6e6e6;
-
-}
-.up-nav svg{
-    margin: 0 100px;
+p {
+   color: red;
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    border: 1px solid black;
+.up-nav {
+   display: flex;
+   justify-content: space-between;
+   background-color: #e6e6e6;
+}
+.up-nav svg {
+   margin: 0 100px;
 }
 
-.navbar li{
-    flex: 1;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
+.navbar {
+   display: flex;
+   align-items: center;
+   list-style: none;
+   border: 1px solid black;
 }
 
-.navbar a{
-    display: block;
-    background-color: var(--main-color);
-    border-radius: 15px;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    padding: 12px;
-    width: 95%;
-    border: 1px solid black;
+.navbar li {
+   flex: 1;
+   margin: 5px;
+   display: flex;
+   justify-content: center;
 }
 
-.navbar a:hover{
-    background-color: var(--li-navbar-hover);
+.navbar a {
+   display: block;
+   background-color: var(--main-color);
+   border-radius: 15px;
+   color: black;
+   text-decoration: none;
+   text-align: center;
+   padding: 12px;
+   width: 95%;
+   border: 1px solid black;
+}
+
+.navbar a:hover {
+   background-color: var(--li-navbar-hover);
 }
