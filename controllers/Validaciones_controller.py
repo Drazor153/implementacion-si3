@@ -27,7 +27,7 @@ def ingresar_rut():
     return json
 
 @validaciones_bp.route('/controller/selecciona-opcion', methods=['POST'])
-def selecciona():
+def selecciona_opcion():
     id_postulacion = request.form['id_postulacion']
     estado = request.form['estado']
     response = model_postulacion.selecciona_opcion(id_postulacion, estado)

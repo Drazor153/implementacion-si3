@@ -33,6 +33,7 @@ h1 {
   justify-content: space-evenly;
   padding: 1rem 0;
   background-color: #e6e6e6;
+  height: calc(100% - 135px);
 }
 /* Div izquierdo */
 .rut-section, .postulacion-section {
